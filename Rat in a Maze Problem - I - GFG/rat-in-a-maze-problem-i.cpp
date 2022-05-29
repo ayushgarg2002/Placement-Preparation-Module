@@ -37,7 +37,7 @@ class Solution{
       
       string s = "";
        if(m[0][0]==0 || m[n-1][n-1]==0){
-       // ans.push_back("-1");
+        ans.push_back("-1");
         return ans;
         }
        vector<vector<int>> vis(n, vector<int>(n));

@@ -34,7 +34,7 @@ class Solution{
         
     }
     vector<string> findPath(vector<vector<int>> &m, int n) {
-        ans.clear();
+      
       string s = "";
        if(m[0][0]==0 || m[n-1][n-1]==0){
        // ans.push_back("-1");

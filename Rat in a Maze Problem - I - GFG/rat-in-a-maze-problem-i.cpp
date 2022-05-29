@@ -29,7 +29,7 @@ class Solution{
         dfs(a, b+1, s+'R', m, n,vis);
         dfs(a, b-1, s+'L', m ,n,vis);
         vis[a][b]=0;
-      //  s="";
+        s="";
         
         
     }

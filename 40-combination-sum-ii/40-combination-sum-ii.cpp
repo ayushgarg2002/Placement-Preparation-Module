@@ -8,7 +8,7 @@ public:
         }   
         
         for(int j=i; j<candi.size(); j++){
-            if(j>i and candi[j-1]==candi[j])
+            if(j!=i and candi[j-1]==candi[j])
                 continue;
                 
             if(candi[j]>target)

@@ -29,7 +29,7 @@ public:
         helper(candidates, target, 0, v, ans);
         
         sort(ans.begin(),ans.end());
-        ans.erase(unique(ans.begin(),ans.end()),ans.end());
+     //   ans.erase(unique(ans.begin(),ans.end()),ans.end());
         
         
         return ans;

@@ -22,9 +22,9 @@ public:
                     cnt++;
                     k++;
                 } 
-                maxi= max(maxi, cnt);
+               
             }
-           
+            maxi= max(maxi, cnt);
         }
         return maxi;
     

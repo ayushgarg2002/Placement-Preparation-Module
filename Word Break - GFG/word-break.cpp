@@ -52,9 +52,6 @@ int solve(string A, vector<string> &B)
            return dp[A]=1;
         //   if(checkString(str, B))
         //   {
-        //     //   if(i==n)
-        //     //   return 1;
-        //     //   int ans = wordBreak(A.substr(i, n-i), B)   ;
         //     if(solve(A.substr(i, n-i), B));
         //     return dp[A]=1;
         //   }

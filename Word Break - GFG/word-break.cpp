@@ -48,13 +48,15 @@ int solve(string A, vector<string> &B)
         //       }
                
         //   }
-           if(checkString(str, B) && solve(A.substr(i, n-i), B)==1)
-           return dp[A]=1;
-        //   if(checkString(str, B))
-        //   {
-        //     if(solve(A.substr(i, n-i), B));
-        //     return dp[A]=1;
-        //   }
+        //   if(checkString(str, B) && solve(A.substr(i, n-i), B))
+        //   return dp[A]=1;
+        //   if(checkString(str, B) && solve(A.substr(i, n-i), B)==1)
+        //   return dp[A]=1;
+          if(checkString(str, B))
+          {
+            if(solve(A.substr(i, n-i), B)==1)
+            return dp[A]=1;
+          }
           
            
        }

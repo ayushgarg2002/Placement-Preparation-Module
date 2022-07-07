@@ -41,14 +41,14 @@ int solve(string A, vector<string> &B)
        {
            int f=0;
            string str = A.substr(0, i);
-           for(int j=0;j<B.size(); j++){
-               if(str.compare(B[j])==0){
-                   f=1;
-                   break;
-               }
+        //   for(int j=0;j<B.size(); j++){
+        //       if(str.compare(B[j])==0){
+        //           f=1;
+        //           break;
+        //       }
                
-           }
-           if(f==1 && solve(A.substr(i, n-i), B)==1)
+        //   }
+           if(checkString(str, B) && solve(A.substr(i, n-i), B)==1)
            return dp[A]=1;
         //   if(checkString(str, B))
         //   {

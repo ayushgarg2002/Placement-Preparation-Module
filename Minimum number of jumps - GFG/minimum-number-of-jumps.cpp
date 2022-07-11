@@ -17,13 +17,11 @@ class Solution{
         if(n==1){
             return 0;
         }
-        else if(arr[0]==0)
+         if(arr[0]==0)
         return -1;
         else{
         for(i=1; i<n-1; i++)
         {
-            
-         
             maxR= max(maxR, i+arr[i]);
             steps--;
             if(steps==0)

@@ -131,8 +131,8 @@ vector<int> leftView(Node *root)
 {
    vector<int>vec;
    queue<Node*>q;
-   if(!root)
-   return vec;
+  if(!root)
+  return vec;
    
    q.push(root);
    while(!q.empty())

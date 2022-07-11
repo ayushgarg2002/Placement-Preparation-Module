@@ -20,10 +20,9 @@ class Solution{
         else if(arr[0]==0)
         return -1;
         else{
-        for(i=1; i<n; i++)
+        for(i=1; i<n-1; i++)
         {
-            if(i==n-1)
-              return jump;
+            
          
             maxR= max(maxR, i+arr[i]);
             steps--;
@@ -35,8 +34,9 @@ class Solution{
                 steps = maxR-i;
             }
         }
-        // return jump;
-    }
+        
+    } 
+    return jump;
 }
 };
 

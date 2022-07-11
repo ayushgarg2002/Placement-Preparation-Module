@@ -19,7 +19,7 @@ class Solution{
         }
          if(arr[0]==0)
         return -1;
-        else{
+        // else{
         for(i=1; i<n-1; i++)
         {
             maxR= max(maxR, i+arr[i]);
@@ -33,7 +33,7 @@ class Solution{
             }
         }
         
-    } 
+   // } 
     return jump;
 }
 };

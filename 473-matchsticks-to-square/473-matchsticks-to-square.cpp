@@ -15,6 +15,15 @@ public:
       {
           if(vec[i] + matchsticks[ind] > target)
               continue;
+          int j= i-1;
+          while(j>=0)
+          {
+              if(vec[i]==vec[j])
+                  break;
+              j--;
+          }
+          if(j!=-1)
+              continue;
           vec[i] += matchsticks[ind];
           if(solve(ind+1, matchsticks, vec, target))
               return true;

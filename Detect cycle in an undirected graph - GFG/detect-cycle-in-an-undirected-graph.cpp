@@ -16,16 +16,21 @@ class Solution {
         parent[src] = -1;
         while(!q.empty())
         {
-            auto u = q.front();
+            auto t = q.front();
             q.pop();
             
-            for (auto v : adj[u]) {
-                if (!vis[v]) {
-                    vis[v] = true;
-                    q.push(v);
-                    parent[v] = u;
-                }else if (parent[u] != v) return true;
+            for(auto x: adj[t])
+            {
+                if(!vis[x]){
+                    vis[x]=1;
+                    q.push(x);
+                    parent[x]=t;
+                }
+                else if(parent[t]!=x)
+                return true;
+                
             }
+            
             
         }
         return false;

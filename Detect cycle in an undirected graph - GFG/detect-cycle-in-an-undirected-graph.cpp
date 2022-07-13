@@ -14,9 +14,9 @@ class Solution {
       
           vector<int> parent(V, -1);
         parent[src] = -1;
-         while(!q.empty())
+        while(!q.empty())
         {
-            int u = q.front();
+            auto u = q.front();
             q.pop();
             
             for (auto v : adj[u]) {
@@ -26,6 +26,7 @@ class Solution {
                     parent[v] = u;
                 }else if (parent[u] != v) return true;
             }
+            
         }
         return false;
     }

@@ -6,43 +6,42 @@ using namespace std;
 class Solution {
   public:
     // Function to detect cycle in a directed graph.
-    bool solve(int i, int V, vector<int>&vis, vector<int>&chk, vector<int>adj[])
+    // bool isCyclic(int V, vector<int> adj[]) {
+    //     // code here
+    // }
+    bool solve(int src, int V, vector<int>&vis, vector<int>&chk, vector<int>adj[])
     {
-        vis[i]=1;
-        chk[i]=1;
-        for(auto x: adj[i])
+        
+        vis[src]=1;
+        chk[src]=1;
+        for(auto x: adj[src])
         {
-            if(!vis[x])
-            {
-               
-                bool see =solve(x, V, vis, chk, adj);
-                if(see== true)
+            if(!vis[x]){
+                if(solve(x, V, vis, chk, adj))
                 return true;
             }
-            else if(chk[x]==1)
-            return true;
+                else if(vis[x] && chk[x]==1)
+                return true;
+                
         }
-        chk[i]=0;
+        chk[src]=0;
         return false;
     }
-    
-    
-    
+  
     bool isCyclic(int V, vector<int> adj[]) {
         vector<int>vis(V, 0);
-        vector<int>chk(V, 0);
-       
-        for(int i=0 ;i<V;i++)
+        vector<int> chk(V,0);
+        for(int i=0;i<V;i++)
         {
-            if(!vis[i]){
-      bool res = solve(i,V, vis, chk, adj);
-      if(res==true)
-      return true;
-                
+            if(!vis[i])
+            {
+                if(solve(i, V, vis, chk, adj))
+                return true;
             }
         }
-      
-      return false;
+        return false;
+        
+        
     }
 };
 

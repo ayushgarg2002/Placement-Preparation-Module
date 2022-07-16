@@ -14,7 +14,9 @@ public:
         //     return;
         ans++;
         grid[i][j]=0;
+        cout<<"cat"<<" ";
         if(isvalid(i+1, j, grid, n, m))
+            
         solve(i+1, j, grid, n, m, ans);
         if(isvalid(i-1, j, grid, n, m))
         solve(i-1, j, grid, n, m, ans);

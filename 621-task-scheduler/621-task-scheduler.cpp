@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int leastInterval(vector<char>& tasks, int n) {
@@ -11,9 +12,11 @@ public:
         for(int i=1; i<26; i++)
         {
             coolDown -= min(vec[i], vec[0]-1);
+          
         }
         if(coolDown < 0)
             return tasks.size();
         return coolDown + tasks.size();
     }
 };
+ 

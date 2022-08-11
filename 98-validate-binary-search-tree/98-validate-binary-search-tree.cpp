@@ -22,10 +22,10 @@ public:
         bool root1 = solve(root->left, min, root->val);
         bool root2 = solve(root->right, root->val, max);
         
-        // if(root1 && root2)
-        //     return true;
-        // return false;
-        return root1 && root2;
+        if(root1 && root2)
+            return true;
+        return false;
+      
     }
     bool isValidBST(TreeNode* root) {
         

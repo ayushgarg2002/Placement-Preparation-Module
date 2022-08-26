@@ -22,7 +22,7 @@ public:
                     s.insert(v);
                     j++;p--;
                 }
-                else if(nums[i]+nums[j]+nums[p]<0)
+              else if(nums[i]+nums[j]+nums[p]<0)
                 {
                     j++;
                 }

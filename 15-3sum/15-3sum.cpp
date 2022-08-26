@@ -69,7 +69,9 @@ public:
                     // j++;
                      vector<int> v={nums[i],nums[j],nums[p]};
                     s.insert(v);
-                    j++;p--;
+                   
+                     p--;
+                    j++;
                 }
                else  if(nums[j]+nums[p]>total)
                     p--;

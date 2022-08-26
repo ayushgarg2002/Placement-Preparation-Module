@@ -11,7 +11,7 @@ public:
         vector<string> vec;
         ss.clear();
         
-        for(i=0; i<30; i++)
+        for(i=0; i<31; i++)
         {
             int k = pow(2, i);
             ss<<k;
@@ -22,7 +22,7 @@ public:
             ss.clear();
         }
         
-        for(i=0; i<30; i++)
+        for(i=0; i<31; i++)
         {
             if(vec[i]==s)
                 return true;

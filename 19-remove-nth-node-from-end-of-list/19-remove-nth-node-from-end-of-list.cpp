@@ -20,8 +20,7 @@ public:
             cnt++;
             node= node->next;
         }
-        if(cnt==1)
-            return node2;
+      
         int pos = cnt - n;
         if(pos==0)
             head= head->next;

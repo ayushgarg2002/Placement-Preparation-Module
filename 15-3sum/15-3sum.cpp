@@ -16,9 +16,15 @@ public:
             // for( j=i+1,p=n-1; j<p; j=j,p=p)
             while(j<p)
             {
-                if(nums[i]+nums[j]+nums[p]==0)
+                if(nums[j]+nums[p]+ nums[i]==0)
                 {
-                    vector<int> v={nums[i],nums[j],nums[p]};
+                    // cout<<nums[i]<<" "<<nums[j]<<" "<<nums[p]<<endl;
+                    // vector<int> v={nums[i],nums[j],nums[p]};
+                    // // s.insert({nums[i], nums[j], nums[p]});
+                    // s.insert(v);
+                    // p--;
+                    // j++;
+                     vector<int> v={nums[i],nums[j],nums[p]};
                     s.insert(v);
                     j++;p--;
                 }

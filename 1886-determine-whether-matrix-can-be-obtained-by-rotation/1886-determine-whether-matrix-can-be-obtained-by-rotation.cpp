@@ -27,14 +27,7 @@ public:
         
     }
         
-        for(int i=0; i<mat.size();i++)
-        {
-            for(int j=0; j<mat.size(); j++){
-              cout<<mat[i][j]<<" ";
-            }                
-             cout<<endl;
-        }
-         
+       
     return false;
     }
     

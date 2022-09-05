@@ -24,7 +24,7 @@ public:
         
         vector<vector<int>> res;
         if(!root)
-            return res;
+            return {};
         queue<Node*> q;
         q.push(root);
         

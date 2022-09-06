@@ -17,13 +17,13 @@ public:
             return 0;
         
         
-        if(root->left ==NULL && root->right == NULL)
-        {
-            if(root->val==0)
-                return 0;
-            else
-                return 1;
-        }
+        // if(root->left ==NULL && root->right == NULL)
+        // {
+        //     if(root->val==0)
+        //         return 0;
+        //     else
+        //         return 1;
+        // }
             int Ltree = solve(root->left);
             int Rtree = solve(root->right);
         

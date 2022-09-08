@@ -11,22 +11,23 @@
  */
 class Solution {
 public:
-
-      void solve(TreeNode* root,  vector<int> &vec)
-  {
-          if(!root)
-              return;
-    
-     
-      if(root->left)
-      solve(root->left, vec); vec.push_back(root->val);
-      if(root->right)
-      solve(root->right, vec);
-   
-  }
-  vector <int>inorderTraversal(TreeNode* root){
-      vector<int> vec;
-      solve(root, vec);
-      return vec;
+    vector<int>vec;
+    void solve(TreeNode* root)
+    {
+        if(!root)
+            return ;
+        
+        if(root->left)
+             solve(root->left); 
+        vec.push_back(root->val);
+        if(root->right)
+            solve(root->right);
+        
+           
+          
+    }
+    vector<int> inorderTraversal(TreeNode* root) {
+        solve(root); 
+        return vec;
     }
 };

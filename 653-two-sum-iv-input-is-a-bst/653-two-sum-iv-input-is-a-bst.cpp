@@ -29,20 +29,33 @@ public:
 //     bool findTarget(TreeNode* root, int k) {
 //            return solve(root, k, root->val);
 //     }
-    map<int,int>m;
-   
+    // map<int,int>m;
+   vector<int> vec;
     bool findTarget(TreeNode* root, int k) {
        pre(root);
-        for(auto p: m){
-            int x=p.first;
-            m[x]--;
-            if(m.find(k-x)!=m.end()  && m[k-x] > 0)return true;
+        // for(auto p: m){
+        //     int x=p.first;
+        //     m[x]--;
+        //     if(m.find(k-x)!=m.end()  && m[k-x] > 0)return true;
+        // }
+        sort(vec.begin(), vec.end());
+        int i=0, j=vec.size()-1;
+        for(i=0, j=j; i<j; i,j)
+        {
+            if(vec[i] + vec[j] == k)
+                return true;
+            else if(vec[i] +  vec[j] >k)
+                j--;
+            else
+                i++;
         }
+            
         return false;
     }
     void pre(TreeNode* root){
         if(!root)return;
-        m[root->val]++;
+        // m[root->val]++;
+        vec.push_back(root->val);
         pre(root->left);
         pre(root->right);
         

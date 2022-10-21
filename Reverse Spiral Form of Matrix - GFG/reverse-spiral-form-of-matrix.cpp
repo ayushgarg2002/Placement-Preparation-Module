@@ -8,59 +8,52 @@ using namespace std;
 class Solution {
   public:
     vector<int> reverseSpiral(int row, int col, vector<vector<int>>&a)  {
-        // code here
-        // int i,j, p=0, q=0;
-        // vector<int>vec;
-        
-        // while(r>p && c>q)
-        // {
-        //      for(i=p; i<r; i++)
-        //      {
-        //         for(j=q; j<c; j++)
-        //         {
-        //             vec.push_back(a[i][j]);
-        //         }
-        //     }
-        //     p=p+1;
-        //     q= q-1;
-            
-        // }
-        // return vec;
        
-       
-       int left = 0;
-        int right = col;
-        int top = 0;
-        int bot = row;
-        vector<int> ans;
-        while(left < right && top < bot){
-            if(left < right && top < bot){
-                for(int i=left;i<right;i++){
-                    ans.push_back(a[top][i]);
+       int left=0;
+       int right=col;
+       int top = 0;
+       int bot=row;
+       vector<int>vec;
+       while(left<right && top<bot)
+       {
+           
+           if(left<right && top<bot)
+           {
+               for(int i=left; i<right; i++)
+                {
+                    vec.push_back(a[top][i]);
                 }
-                top++;
-            }
-            if(left < right && top < bot){
-                for(int i=top;i<bot;i++){
-                    ans.push_back(a[i][right-1]);
+           }
+           top++;
+           if(left<right && top<bot)
+           {
+               for(int i=top; i<bot; i++)
+                {
+                    vec.push_back(a[i][right-1]);
                 }
-                right--;
-            }
-            if(left < right && top < bot){
-                for(int i=right-1;i>=left;i--){
-                    ans.push_back(a[bot-1][i]);
+           }
+           right--;
+           
+           if(left<right && top<bot)
+           {
+               for(int i=right-1; i>=left; i--)
+                {
+                    vec.push_back(a[bot-1][i]);
                 }
-                bot--;
-            }
-            if(left < right && top < bot){
-                for(int i=bot-1;i>=top;i--){
-                    ans.push_back(a[i][left]);
+           }
+           bot--;
+           
+           if(left<right && top<bot)
+           {
+               for(int i=bot-1; i>=top; i--)
+                {
+                    vec.push_back(a[i][left]);
                 }
-                left++;
-            }
-        }
-        reverse(ans.begin(),ans.end());
-        return ans;
+           }
+           left++;
+       }
+       reverse(vec.begin(), vec.end());
+       return vec;
     }
 };
 
